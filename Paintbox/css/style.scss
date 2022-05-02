@@ -1,0 +1,167 @@
+@import '_variables';
+@import '_reset';
+@import '_mixins';
+
+body {font-family: 'Caladea', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    height: 155px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $navbar-font-size;
+    color: $black;
+    background-color: $background;
+
+    top: 0;
+    position: sticky;
+    .navbar_l {
+        display: flex;
+        padding-left: 100px;
+        #product {
+            padding-left: 50px;
+        }   
+    }
+    .logo {
+        padding-right: 100px;
+        font-size: 50px;
+    }
+    .navbar_r {
+        display: flex;
+        padding-right: 100px;
+        #journal {
+            padding-right: 50px;
+        }
+        #bag {
+            padding-right: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+.content {
+    font-size: $content-font-size;
+    
+    display: grid;
+    grid-template-areas: 
+    'content1'
+    'content2'
+    'content3';
+    gap: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    .content1 {
+        background-color: $content-background;
+        grid-area: content1;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        .content1_info {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 120px 120px;
+            button {
+                @include button_design;
+            }
+        }
+    }
+    .content2 {
+        background-color: $content-background;
+        grid-area: content2;
+        display: flex;
+        justify-content: center;
+        .content2_info {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 120px 120px;
+            #our {
+                padding-bottom: 30px;
+                font-size: $navbar-font-size
+                
+            }
+            button {
+                margin-top: 30px;
+                @include button_design;                
+            }
+        }
+    }
+    .content3 {
+        grid-area: content3;
+        background-color: $background;
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #shop {
+                padding-bottom: 30px;
+                font-size: $navbar-font-size;
+            }
+            #new {
+                padding-bottom: 30px;
+                font-size: $content-font-size;
+            }
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            .item1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                .item1_info {
+                    li {
+                        text-align: center;  
+                    }
+                    button {
+                    @include button_design;
+                    }
+                    
+                    }
+            }
+            .item2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                .item2_info {
+                    li {
+                        text-align: center;
+                        padding-top: 30px  
+                    }
+                    button {
+                    @include button_design;
+                    }
+                    
+                    }
+            }
+            .item3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                .item3_info {
+                    li {
+                        text-align: center;  
+                    }
+                    button {
+                    @include button_design;
+                    }
+                    
+                    }
+            }
+        }
+    }
+}
