@@ -1,0 +1,91 @@
+@import '_variables';
+@import '_reset';
+
+body {
+    background-color: $white;
+    color: $black;
+    height: 1000vh;
+    .navbar {
+        font-size: $navbar_font_size;
+        background-color: $white;
+        display: grid;
+        grid-template-areas: 'navbar_l navbar_r';
+        grid-template-columns: 20fr  10fr;
+        grid-template-rows: 48px;
+        padding: 0 12px 0 0px;
+        top: 0;
+        position: sticky;
+        width: 100%;
+        .navbar_l {
+            grid-area: navbar_l;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            left: 0;
+            &:hover {
+                background-color: $light-grey;
+            }
+            .logo {
+                padding-right: 90px;
+                padding-left: 12px;
+                &:hover {
+                    color: $white;
+                }
+            }
+            .not_logo {
+                display: flex;
+                color: $light-grey;
+                &:hover {
+                    color: $white;
+                }
+                li {
+                    padding-right: 45px;
+                }
+            }
+        }
+        .navbar_r {
+            grid-area: navbar_r;
+            display: flex;
+            flex-direction: row;
+            padding-left: 12px;
+            margin-right: 0;
+            &:hover {
+                background-color: $light-grey;
+            }
+            ul {
+                
+                display: flex;
+                align-items: center;
+                
+                li{
+                    padding-right: 45px;
+                    }
+                .lang {
+                    font-size: 14px;
+                    
+                    
+                }
+                }
+            }
+        
+    }
+    .content {
+        height: 1000vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 50vh;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        article {
+            
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            span {
+                
+            }
+        }
+    }   
+}
